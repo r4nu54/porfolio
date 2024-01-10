@@ -1,26 +1,70 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+import Layout from '@/layouts/Layout.astro';
+import Badge from '@/components/Badge.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import SocialPill from '@/components/SocialPill.astro';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
+import GitHubIcon from '@/components/icons/GitHubIcon.astro';
+import TwitterIcon from '@/components/icons/TwitterIcon.astro';
+import MailIcon from '@/components/icons/MailIcon.astro';
+import Experience from '@/components/Experience.astro';
+import SuiteCaseIcon from '@/components/icons/SuiteCaseIcon.astro';
 ---
 
-<Layout title='Welcome to Astro.'>
-  <main>
-    <section class='w-full mx-auto lg:w-[740px] py-44'>
-      <h1 class='flex gap-2 text-5xl font-semibold'>
+<Layout title='Porfolio de Raúl Núñez'>
+  <main class='px-4'>
+    <SectionContainer class='py-20 pb-20'>
+      <img
+        class='mb-4 rounded-full size-20'
+        src='profile.webp'
+        alt='Imagen de perfil de Raúl Núñez'
+        fetchpriority='high'
+      />
+      <h1
+        class='flex flex-row pb-6 text-3xl font-semibold text-white md:text-4xl lg:text-5xl gap-x-4 lg:pb-10'>
         Hey, soy Raúl <a
           href='https://www.linkedin.com/in/raulnunezsantiago/'
           target='_blank'
           rel='noopener'
-          class='flex place-items-center'
-        >
-          <Badge>Open to work</Badge></a
-        >
+          class='flex items-center justify-center'>
+          <Badge>Disponible para trabajar</Badge>
+        </a>
       </h1>
-      <h2 class='text-xl opacity-80'>Desarrolador Web y estudiante life-time. De Málaga, España</h2>
-      <ul>
-        <Badge>React</Badge>
-        <Badge>2</Badge>
-      </ul>
-    </section>
+      <h2 class='text-lg lg:text-1xl text-pretty max-w-[700px] text-white'>
+        Desde pequeño en contacto con la tecnología, +20 años de experiencia como técnico IT en una
+        gran empresa nacional, ahora buscando mi sitio como
+        <span class='text-yellow-200'> desarrollador web.</span> Estudiante full-time de Benalmádena,
+        España.
+      </h2>
+      <nav class='flex flex-wrap gap-6 mt-4'>
+        <SocialPill
+          href='https://www.linkedin.com/in/raulnunezsantiago/'
+          title='LinkedIn'>
+          <LinkedInIcon class='size-6' />
+        </SocialPill>
+        <SocialPill
+          href='https://github.com/R4NU54/'
+          title='GitHub'>
+          <GitHubIcon class='size-6' />
+        </SocialPill>
+        <SocialPill
+          href='https://twitter.com/ranusa/'
+          title='Twitter'>
+          <TwitterIcon class='size-5' />
+        </SocialPill>
+        <SocialPill
+          href='mailto:raul.nunez.santiago@outlook.es'
+          title='Email'>
+          <MailIcon class='size-6' />
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id='experiencia'>
+      <h2 class='flex items-center mb-2 text-2xl font-semibold gap-x-2'>
+        <SuiteCaseIcon class='size-6' />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
