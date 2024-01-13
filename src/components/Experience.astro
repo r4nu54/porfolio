@@ -1,29 +1,27 @@
 ---
-import ExperienceItem from './ExperienceItem.astro';
+import type { IExperiences } from '@/types/';
 
-const EXPERIENCIE = [
-  {
-    date: 'Actualmente...',
-    title: 'Creador de Contenido - Twitch',
-    description:
-      'Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.',
-    link: 'https://twitch.tv/midudev',
-  },
-  {
-    date: 'Septiembre 2022',
-    title: 'Principal Frontend Engineer - Adevinta Spain',
-    description:
-      'Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.',
-  },
-];
+const { title, details } = Astro.props as IExperiences;
 ---
 
-<ol class='relative ml-3 border-gray-200 border-s'>
-  {
-    EXPERIENCIE.map((experiencie) => (
+<h3 class='mb-4 mt-6 text-xl font-semibold text-white'>{title}</h3>
+{
+  details.map((item) => (
+    <ol class='relative flex flex-grow border-s border-gray-200 dark:border-gray-700'>
       <li class='mb-10 ms-4'>
-        <ExperienceItem {...experiencie} />
+        <div class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
+        <time class='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+          {item.startDate} - {item.endDate}
+        </time>
+        <h3 class='text-lg font-semibold text-yellow-200'>{item.name}</h3>
+        <p class='mb-4 text-pretty text-base font-normal text-gray-400'>
+          {item.description.map((item) => (
+            <ul>
+              <li>{item}</li>
+            </ul>
+          ))}
+        </p>
       </li>
-    ))
-  }
-</ol>
+    </ol>
+  ))
+}

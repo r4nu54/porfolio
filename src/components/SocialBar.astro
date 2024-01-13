@@ -1,0 +1,39 @@
+---
+import { info } from '@/data/info';
+
+import GithubIcon from '@/components/icons/GitHubIcon.astro';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
+import TwitterIcon from '@/components/icons/TwitterIcon.astro';
+import MailIcon from '@/components/icons/MailIcon.astro';
+---
+
+<section class='mb-6 flex gap-5 place-self-center'>
+  <a
+    aria-label='Social Media'
+    href={info.socialMedia.github}
+    target='_blank'
+    class='social-icons aria-["Github"]'>
+    <GithubIcon />
+  </a>
+  <a
+    aria-label='Social Media'
+    href={info.socialMedia.linkedin}
+    target='_blank'
+    class='social-icons aria-["LinkedIn"]'>
+    <LinkedInIcon />
+  </a>
+  <a
+    aria-label='Social Media'
+    href={info.socialMedia.twitter}
+    target='_blank'
+    class='social-icons aria-["Twitter"]'>
+    <TwitterIcon />
+  </a>
+  <a
+    aria-label='Social Media'
+    href={info.socialMedia.email}
+    target='_blank'
+    class='social-icons aria-["email"]'>
+    <MailIcon />
+  </a>
+</section>

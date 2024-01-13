@@ -1,0 +1,52 @@
+---
+import { info } from '@/data/info';
+import { createLogo } from '@/utils';
+---
+
+<header class='container sticky top-0 z-10 flex h-[80px] items-center justify-center sm:h-[123px]'>
+  <!-- <a
+    class='dark:text-light text-2xl font-semibold dark:font-semibold'
+    href='/'
+    >{createLogo(info.name)}.
+  </a> -->
+  <nav>
+    <ul class='flex items-center gap-4'>
+      <li>
+        <a
+          class='navbar'
+          href='#top'
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          class='navbar'
+          href='#experiencia'
+          >Experiencia</a
+        >
+      </li>
+      <li>
+        <a
+          class='navbar'
+          href='#educacion'
+          >Educación</a
+        >
+      </li>
+      <li>
+        <a
+          class='navbar'
+          href='#proyectos'
+          >Proyectos</a
+        >
+      </li>
+
+      <li>
+        <a
+          class='navbar'
+          href='#contacto'
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,30 @@
+---
+import type { IHeroProps } from '@/types';
+import Badge from './Badge.astro';
+import SocialBar from './SocialBar.astro';
+
+const { name, about } = Astro.props as IHeroProps;
+---
+
+<section class='flex flex-col'>
+  <img
+    class='mb-2 mt-[80px] size-20 rounded-full'
+    src='assets/images/profile.webp'
+    alt=''
+  />
+  <h2>Hey, soy</h2>
+  <section class='flex gap-6'>
+    <h1>{name}</h1>
+    <a
+      href='https://www.linkedin.com/in/raulnunezsantiago/'
+      target='_blank'
+      rel='noopener'
+      class='flex items-center justify-center'>
+      <Badge>Open to work</Badge>
+    </a>
+  </section>
+  <p class='mb-16 text-white'>
+    {about}
+  </p>
+  <SocialBar />
+</section>

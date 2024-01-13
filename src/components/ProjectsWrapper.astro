@@ -1,0 +1,13 @@
+---
+import type { IProjects } from '@/types';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const { projects, title } = Astro.props as IProjects;
+---
+
+<section>
+  <h2 class='mt-6 w-[15rem]'>{title}</h2>
+  <div class='my-6 grid grid-cols-1 gap-10 md:grid-cols-2'>
+    {projects.map((project) => <ProjectCard projectDetail={project} />)}
+  </div>
+</section>

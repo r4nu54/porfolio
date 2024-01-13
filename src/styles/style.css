@@ -1,0 +1,50 @@
+/* ========== import custom styles ========== */
+@import 'custom-styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== tailwind custom styles ========== */
+@layer components {
+  body {
+    /* @apply bg-light dark:bg-dark; */
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Onest Variable', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    @apply mx-auto max-w-[800px] px-4;
+  }
+
+  h1 {
+    @apply main-heading text-4xl sm:text-7xl;
+  }
+
+  h2 {
+    @apply text-xl font-semibold text-white;
+  }
+
+  p,
+  li,
+  a {
+    @apply text-pretty text-white/50;
+  }
+
+  nav a {
+    @apply transition-all duration-300 hover:scale-105 hover:text-white;
+  }
+
+  .social-icons {
+    @apply flex size-16  items-center justify-center rounded-xl border-2 p-4 hover:border-amber-300 hover:text-yellow-200;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
