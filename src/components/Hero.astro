@@ -1,6 +1,6 @@
 ---
-import type { IHeroProps } from '@/types';
 import Badge from './Badge.astro';
+import type { IHeroProps } from '@/types';
 
 const { name, about, id } = Astro.props as IHeroProps;
 ---
@@ -11,7 +11,7 @@ const { name, about, id } = Astro.props as IHeroProps;
   <img
     class='mb-2 size-20 rounded-full'
     src='assets/images/profile.webp'
-    alt=''
+    alt='Profile picture'
   />
   <h2>Hey, soy</h2>
   <section class='flex gap-6'>
@@ -20,7 +20,7 @@ const { name, about, id } = Astro.props as IHeroProps;
       href='https://www.linkedin.com/in/raulnunezsantiago/'
       target='_blank'
       rel='noopener'
-      class='flex items-center justify-center'>
+      class='flex items-center justify-center transition duration-300 hover:scale-105'>
       <Badge>Open to work</Badge>
     </a>
   </section>

@@ -12,14 +12,14 @@ const { title, details, id } = Astro.props as IExperiences;
   </h2>
   {
     details.map((item) => (
-      <ol class='relative flex flex-grow border-s border-gray-200'>
+      <ol class='relative flex flex-grow border-s border-gray-700 dark:border-gray-200'>
         <li class='mb-10 ms-4'>
-          <div class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200' />
+          <div class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-gray-700 bg-gray-600 dark:border-white dark:bg-gray-200' />
           <time class='mb-1 text-sm font-normal leading-none text-gray-400'>
             {item.startDate} - {item.endDate}
           </time>
-          <h3 class='text-lg font-semibold text-yellow-200'>{item.name}</h3>
-          <p class='mb-4 text-pretty text-base font-normal text-gray-400'>
+          <h3 class='text-lg font-semibold text-sky-400 dark:text-yellow-200'>{item.name}</h3>
+          <p class='mb-4 text-pretty text-base font-normal dark:text-gray-400'>
             {item.description.map((item) => (
               <ul>
                 <li>{item}</li>

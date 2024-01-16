@@ -1,9 +1,8 @@
-
 const createLogo = (name: string) =>
   name
-    .split(" ")
+    .split(' ')
     .map((word) => word[0])
-    .join("")
+    .join('')
     .toUpperCase();
 
-export { createLogo };
+export default createLogo;
