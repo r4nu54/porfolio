@@ -11,37 +11,36 @@ export const info = {
     {
       name: 'Freelance Web Developer',
       startDate: 'Junio 2023',
-      endDate: 'Present',
+      endDate: 'Presente',
       description: [
-        '- Developing screens and UI components for the web application using React and Tailwind.',
-        '- Fixing UI issues and integrating backend APIs with Redux Saga.',
+        '- Desarrollo de pantallas y componentes UI para la aplicación web utilizando React y Tailwind.',
       ],
     },
 
     {
-      name: 'Coupon Approve (Remote)',
-      startDate: 'Nov 2020',
-      endDate: 'Apr 2022',
+      name: 'My Site Works, S.L. - Web Developer',
+      startDate: 'Marzo 2023',
+      endDate: 'Junio 2023',
       description: [
-        '✓ Developing code in accordance with appropriate design and architectural rules',
-        '✓ Documenting, testing, deployment, maintenance, support of platforms, applications, databases and solutions',
-        '✓ Help and training of other colleagues',
-        '✓ Others tasks connected to the nature of the job',
-        '✓ Code Improvements and Refactoring ',
-        '✓ Best Practices and Rules Maintainer',
+        '✓ Implementación de nuevos componentes a los proyectos de la empresa.',
+        '✓ Ayudando y aprendiendo de otros compañeros.',
+        '✓ Mejoras y refactorización del código. ',
+        '✓ Buenas prácticas y mantenimiento de normas.',
       ],
     },
   ],
 
   education: [
     {
-      name: 'Máster Front End  ',
-      startDate: '2019',
-      endDate: '2022',
-      description: ['Diploma of Associate Engineering,  Computer Information Technology (CIT)'],
+      name: 'Máster Front End XV - Lemoncode Formación, S.L.',
+      startDate: 'Octubre 2023',
+      endDate: 'Presente',
+      description: [
+        'React, Nextjs, Angular, Svelte, Vuejs, Flexbox, CSS Grid, Material Design, Jest, Cypress, Webpack, Vite, HTML5, CSS, JavaScript, TypeScript, d3js, CSS in JS, GraphQL, Blazor, Web Components, socket.io, Git, Github Actions',
+      ],
     },
     {
-      name: 'Grado Superior en Desarrollo de Aplicaciones Web',
+      name: 'Grado Superior en Desarrollo de Aplicaciones Web (DAW) - Medac, S.L.',
       startDate: 'Octubre 2021',
       endDate: 'Junio 2023',
       description: ['Intermediate, Pre-Engineering'],
@@ -65,7 +64,7 @@ export const info = {
     },
     {
       title: 'Ranusa Portfolio',
-      isFeatured: true,
+      isFeatured: false,
       thumbnail: '/assets/images/astro-portfolio.webp',
       githubUrl: 'https://github.com/uzzii-21/astro-portfolio',
       liveUrl: 'https://astro-portfolio-uzair.vercel.app/',

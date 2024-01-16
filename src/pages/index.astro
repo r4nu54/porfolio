@@ -3,40 +3,36 @@ import { info } from '@/data/info';
 
 import Layout from '@/layouts/Layout.astro';
 import Hero from '@/components/Hero.astro';
-import MetaHead from '@/components/MetaHead.astro';
 import Experience from '@/components/Experience.astro';
 import ProjectsWrapper from '@/components/ProjectsWrapper.astro';
 
 import '@/styles/style.css';
+import SocialBar from '@/components/SocialBar.astro';
 ---
 
-<!doctype html>
-<html lang='es'>
-  <head>
-    <MetaHead
-      title={'Portfolio de Raul Nunez'}
-      description={info.about}
-      ogImageUrl={'assets/images/profile.webp'}
-    />
-  </head>
-  <body>
-    <Layout>
-      <Hero
-        name={info.name}
-        about={info.about}
-      />
-      <Experience
-        title={'Experiencia'}
-        details={info.experience}
-      />
-      <Experience
-        title={'Educación'}
-        details={info.education}
-      />
-      <ProjectsWrapper
-        title={'Proyectos'}
-        projects={info.projects}
-      />
-    </Layout>
-  </body>
-</html>
+<Layout>
+  <Hero
+    name={info.name}
+    about={info.about}
+    id='top'
+  />
+  <Experience
+    title={'Experiencia Laboral'}
+    details={info.experience}
+    id='experiencia'
+  />
+  <Experience
+    title={'Educación'}
+    details={info.education}
+    id='educacion'
+  />
+  <ProjectsWrapper
+    title={'Proyectos'}
+    projects={info.projects}
+    id='proyectos'
+  />
+  <SocialBar
+    title={'Contacto y redes'}
+    id='contacto'
+  />
+</Layout>

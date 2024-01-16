@@ -1,39 +1,55 @@
 ---
 import { info } from '@/data/info';
 
+import type { ISocialBar } from '@/types';
+
 import GithubIcon from '@/components/icons/GitHubIcon.astro';
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
 import TwitterIcon from '@/components/icons/TwitterIcon.astro';
 import MailIcon from '@/components/icons/MailIcon.astro';
+
+const { title, id } = Astro.props as ISocialBar;
 ---
 
-<section class='mb-6 flex gap-5 place-self-center'>
-  <a
-    aria-label='Social Media'
-    href={info.socialMedia.github}
-    target='_blank'
-    class='social-icons aria-["Github"]'>
-    <GithubIcon />
-  </a>
-  <a
-    aria-label='Social Media'
-    href={info.socialMedia.linkedin}
-    target='_blank'
-    class='social-icons aria-["LinkedIn"]'>
-    <LinkedInIcon />
-  </a>
-  <a
-    aria-label='Social Media'
-    href={info.socialMedia.twitter}
-    target='_blank'
-    class='social-icons aria-["Twitter"]'>
-    <TwitterIcon />
-  </a>
-  <a
-    aria-label='Social Media'
-    href={info.socialMedia.email}
-    target='_blank'
-    class='social-icons aria-["email"]'>
-    <MailIcon />
-  </a>
+<section
+  id={id}
+  class='my-20 flex scroll-mt-24 flex-col
+  lg:scroll-mt-16'>
+  <h2 class='my-6'>
+    {title}
+  </h2>
+  <article class='flex flex-wrap justify-center gap-5'>
+    <a
+      aria-label='email icon'
+      href={info.socialMedia.email}
+      target='_blank'
+      class='social-icons aria-["email"]'>
+      <MailIcon />
+      eMail
+    </a>
+    <a
+      aria-label='Github icon'
+      href={info.socialMedia.github}
+      target='_blank'
+      class='social-icons'>
+      <GithubIcon />
+      Github
+    </a>
+    <a
+      aria-label='LinkedIn icon'
+      href={info.socialMedia.linkedin}
+      target='_blank'
+      class='social-icons aria-["LinkedIn"]'>
+      <LinkedInIcon />
+      LinkedIn
+    </a>
+    <a
+      aria-label='Twitter icon'
+      href={info.socialMedia.twitter}
+      target='_blank'
+      class='social-icons aria-["Twitter"]'>
+      <TwitterIcon />
+      Twitter
+    </a>
+  </article>
 </section>

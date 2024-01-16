@@ -45,7 +45,7 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
     />
   )
 }
-{title && <title>{`${title} - ${info.name}`}</title>}
+{title && <title>{`${title} ${info.name}`}</title>}
 {
   title && (
     <meta
@@ -104,59 +104,3 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
     />
   )
 }
-
-<!-- Twitter -->
-{
-  title && (
-    <meta
-      property='twitter:card'
-      content='summary_large_image'
-    />
-  )
-}
-{
-  title && (
-    <meta
-      property='twitter:url'
-      content={`${info.baseUrl}${Astro.url.pathname}`}
-    />
-  )
-}
-{
-  title && (
-    <meta
-      property='twitter:title'
-      content={`${title} - ${info.name}`}
-    />
-  )
-}
-{
-  description && (
-    <meta
-      property='twitter:description'
-      content={description}
-    />
-  )
-}
-{
-  ogImageUrl && (
-    <meta
-      property='twitter:image'
-      content={`${info.baseUrl}${ogImageUrl}`}
-    />
-  )
-}
-
-<!-- preload assests -->
-<!-- <link
-  rel='preload'
-  href='/assets/fonts/Inter/Inter-Light.ttf'
-  as='font'
-  crossorigin
-/>
-<link
-  rel='preload'
-  href='/assets/fonts/Outfit/Outfit-SemiBold.ttf'
-  as='font'
-  crossorigin
-/> -->

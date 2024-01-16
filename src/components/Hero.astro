@@ -1,20 +1,21 @@
 ---
 import type { IHeroProps } from '@/types';
 import Badge from './Badge.astro';
-import SocialBar from './SocialBar.astro';
 
-const { name, about } = Astro.props as IHeroProps;
+const { name, about, id } = Astro.props as IHeroProps;
 ---
 
-<section class='flex flex-col'>
+<section
+  id={id}
+  class='my-20 flex scroll-mt-36 flex-col'>
   <img
-    class='mb-2 mt-[80px] size-20 rounded-full'
+    class='mb-2 size-20 rounded-full'
     src='assets/images/profile.webp'
     alt=''
   />
   <h2>Hey, soy</h2>
   <section class='flex gap-6'>
-    <h1>{name}</h1>
+    <h1 class='my-6'>{name}</h1>
     <a
       href='https://www.linkedin.com/in/raulnunezsantiago/'
       target='_blank'
@@ -23,8 +24,7 @@ const { name, about } = Astro.props as IHeroProps;
       <Badge>Open to work</Badge>
     </a>
   </section>
-  <p class='mb-16 text-white'>
+  <p>
     {about}
   </p>
-  <SocialBar />
 </section>

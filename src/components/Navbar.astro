@@ -3,50 +3,20 @@ import { info } from '@/data/info';
 import { createLogo } from '@/utils';
 ---
 
-<header class='container sticky top-0 z-10 flex h-[80px] items-center justify-center sm:h-[123px]'>
-  <!-- <a
-    class='dark:text-light text-2xl font-semibold dark:font-semibold'
-    href='/'
-    >{createLogo(info.name)}.
-  </a> -->
-  <nav>
-    <ul class='flex items-center gap-4'>
-      <li>
-        <a
-          class='navbar'
-          href='#top'
-          >Inicio</a
-        >
-      </li>
-      <li>
-        <a
-          class='navbar'
-          href='#experiencia'
-          >Experiencia</a
-        >
-      </li>
-      <li>
-        <a
-          class='navbar'
-          href='#educacion'
-          >Educación</a
-        >
-      </li>
-      <li>
-        <a
-          class='navbar'
-          href='#proyectos'
-          >Proyectos</a
-        >
-      </li>
-
-      <li>
-        <a
-          class='navbar'
-          href='#contacto'
-          >Contacto</a
-        >
-      </li>
-    </ul>
-  </nav>
+<header class='container sticky top-4 z-10'>
+  <section
+    class='navbar flex flex-col items-center justify-between rounded-xl bg-[#16161f] lg:flex-row lg:p-4'
+    '>
+    <a
+      class='text-2xl font-semibold'
+      href='#top'
+      >{createLogo(info.name)}.
+    </a>
+    <nav class='top-10 flex items-center gap-4'>
+      <a href='#experiencia'>Experiencia</a>
+      <a href='#educacion'>Educación</a>
+      <a href='#proyectos'>Proyectos</a>
+      <a href='#contacto'>Contacto</a>
+    </nav>
+  </section>
 </header>
