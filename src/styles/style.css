@@ -40,20 +40,12 @@
     @apply text-pretty dark:text-white/50;
   }
 
-  /* .navbar {
-    @apply w-full -translate-y-full transform bg-gray-800 p-4 text-white transition-transform duration-300;
-  } */
-
   .navbar a {
     @apply text-black/50 transition-all duration-300 hover:scale-105 hover:text-black dark:text-white/50 dark:hover:text-white;
   }
 
   .social-icons {
     @apply flex h-10 w-32 items-center justify-center gap-x-2 rounded-lg border-2 border-black/50 bg-white/70 p-5 text-black/60 transition-all duration-300 hover:scale-105 hover:border-black hover:bg-white/80 hover:text-black dark:bg-white/5 dark:hover:bg-white/15 dark:hover:text-white;
-  }
-
-  .dark .nav-links a {
-    color: #fff;
   }
 }
 

@@ -11,14 +11,14 @@ import ThemeIcon from '@/components/ThemeIcon.astro';
     <a
       class='text-2xl font-semibold'
       href='/#top'
-      >{createLogo(info.name)}.
+      >{createLogo(info.name)}.0.
     </a>
-    <nav class='top-10 flex items-center gap-4'>
+    <nav class='navbar top-10 flex items-center gap-3 p-2'>
       <a href='/#experiencia'>Experiencia</a>
       <a href='/#educacion'>Educación</a>
       <a href='/#proyectos'>Proyectos</a>
       <a href='/#contacto'>Contacto</a>
+      <ThemeIcon />
     </nav>
-    <ThemeIcon />
   </section>
 </header>

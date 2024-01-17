@@ -1,8 +1,8 @@
 <button id='themeToggle'>
   <svg
     width='20px'
-    fill='currentColor'
     xmlns='http://www.w3.org/2000/svg'
+    stroke-width='2'
     viewBox='0 0 24 24'>
     <path
       class='sun'
@@ -24,7 +24,11 @@
   }
 
   .sun {
-    fill: black;
+    fill: rgb(0 0 0 / 0.5);
+  }
+  & hover: {
+    transfomr: scale(1.1);
+    fill: rgb(0 0 0 / 0.8);
   }
 
   .moon {
@@ -34,8 +38,9 @@
   :global(.dark) .sun {
     fill: transparent;
   }
+
   :global(.dark) .moon {
-    fill: white;
+    fill: rgb(255 255 255 / 0.5);
   }
 </style>
 

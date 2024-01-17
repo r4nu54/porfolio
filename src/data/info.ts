@@ -1,6 +1,7 @@
 export const info = {
   baseUrl: '',
   name: 'Raúl Núñez',
+  title: 'Porfolio de Raúl Núñez',
   jobDescription: 'Web Developer',
   about: ` Desde pequeño en contacto con la tecnología, +20 años de experiencia como técnico IT en una
         gran empresa nacional, ahora buscando mi sitio como desarrollador web. Estudiante full-time de Benalmádena,
