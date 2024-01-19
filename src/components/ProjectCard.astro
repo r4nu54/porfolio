@@ -11,7 +11,7 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
       githubUrl && (
         <a
           href={githubUrl}
-          class='rounded-full bg-black/50 p-3 text-white backdrop-blur-md'
+          class='rounded-full bg-black/50 p-3 text-white backdrop-blur-md transition-all duration-500 hover:scale-110'
           aria-label='Social Media'
           target='_blank'>
           <svg
@@ -35,7 +35,7 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
       liveUrl && (
         <a
           href={liveUrl}
-          class='ml-1 rounded-full bg-black/50 p-3 text-white backdrop-blur-md'
+          class='ml-1 rounded-full bg-black/50 p-3 text-white backdrop-blur-md transition-all duration-500 hover:scale-110'
           aria-label='Social Media'
           target='_blank'>
           <svg
@@ -61,7 +61,6 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
       )
     }
   </div>
-
   <a
     href={liveUrl ? liveUrl : githubUrl}
     target='_blank'>

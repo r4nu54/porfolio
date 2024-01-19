@@ -27,17 +27,14 @@ import { info } from '@/data/info';
     />
     <title>{info.title}</title>
   </head>
-  <body>
+  <body class='relative'>
     <div
-      class='absolute top-0 z-10 w-dvw bg-white [background:radial-gradient(100%_100%_at_50%_10%,#fff_40%,#63e_100%)] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'>
-      <Navbar />
-      <main class='container'>
-        <slot />
-      </main>
-      <Footer />
+      class='absolute bottom-0 top-0 -z-10 w-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
     </div>
-    <div
-      class='absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]'>
-    </div>
+    <Navbar />
+    <main class='container'>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
