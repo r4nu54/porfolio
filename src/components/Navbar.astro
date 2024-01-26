@@ -4,16 +4,16 @@ import createLogo from '@/utils';
 import ThemeIcon from '@/components/ThemeIcon.astro';
 ---
 
-<header class='container sticky top-4 z-10'>
+<header class='sticky top-0 z-10'>
   <section
-    class='navbar flex flex-col items-center justify-between rounded-xl bg-[#ad92f5] dark:bg-[#16161f] sm:flex-row sm:px-4'
+    class='navbar flex flex-col items-center justify-between bg-[rgba(173,146,245,0.5)] backdrop-blur-md dark:bg-[rgba(22,22,31,0.5)] sm:flex-col'
     '>
     <a
       class='text-2xl font-semibold'
       href='/#top'
       >{createLogo(info.name)}
     </a>
-    <nav class='navbar top-10 flex items-center gap-3 p-2'>
+    <nav class='navbar top-10 flex flex-col items-center gap-3 p-2 sm:flex-row'>
       <a href='/#experiencia'>Experiencia</a>
       <a href='/#educacion'>Educación</a>
       <a href='/#proyectos'>Proyectos</a>

@@ -37,14 +37,14 @@ export const info = {
       startDate: 'Octubre 2023',
       endDate: 'Presente',
       description: [
-        'React, Nextjs, Angular, Svelte, Vuejs, Flexbox, CSS Grid, Material Design, Jest, Cypress, Webpack, Vite, HTML5, CSS, JavaScript, TypeScript, d3js, CSS in JS, GraphQL, Blazor, Web Components, socket.io, Git, Github Actions',
+        'React, Nextjs, Angular, Svelte, Vuejs, Flexbox, CSS Grid, Material Design, Jest, Cypress, Webpack, Vite, HTML5, CSS, JavaScript, TypeScript, d3js, CSS in JS, GraphQL, Blazor, Web Components, socket.io, Git, Github Actions.',
       ],
     },
     {
       name: 'Grado Superior en Desarrollo de Aplicaciones Web (DAW) - Medac, S.L.',
       startDate: 'Octubre 2021',
       endDate: 'Junio 2023',
-      description: ['Intermediate, Pre-Engineering'],
+      description: ['Intermediate, Pre-Engineering.'],
     },
   ],
 
