@@ -9,6 +9,7 @@
 @layer components {
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
   html.dark {
@@ -43,6 +44,9 @@
   .navbar a {
     @apply text-black/50 transition-all duration-300 hover:scale-105 hover:text-black dark:text-white/50 dark:hover:text-white;
   }
+  /* .navbar a {
+    @apply text-black/50 transition-all duration-300 hover:scale-105 hover:text-black dark:text-white/50 dark:hover:text-white;
+  } */
 
   .social-icons {
     @apply flex h-10 w-32 items-center justify-center gap-x-2 rounded-lg border-2 border-black/50 bg-white/50 p-5 text-black/50 transition-all duration-300 hover:scale-105 hover:border-black hover:bg-black/15 hover:text-black  dark:border-white/50 dark:bg-black/50 dark:text-white/50 dark:hover:border-white dark:hover:bg-white/15 dark:hover:text-white;
