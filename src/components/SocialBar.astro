@@ -49,4 +49,14 @@ const { title, id } = Astro.props as ISocialBar;
       Twitter
     </a>
   </article>
+  <article>
+    <a
+      aria-label='Download CV icon'
+      href={info.socialMedia.cv}
+      target='_blank'
+      class='aria-["Curriculum"] mt-5 flex justify-center self-center p-2 text-black/50 transition-all duration-300 hover:cursor-pointer hover:text-black dark:hover:text-white'
+      download>
+      Descargar curriculum
+    </a>
+  </article>
 </section>
