@@ -53,6 +53,7 @@ export const info = {
     github: 'https://github.com/R4NU54',
     email: 'mailto:raul.nunez.santiago@outlook.es',
     linkedin: 'https://www.linkedin.com/in/raulnunezsantiago',
+    cv: '/assets/Cv_Raul_Nunez_Santiago.pdf',
   },
 
   projects: [
