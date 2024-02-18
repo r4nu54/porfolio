@@ -13,9 +13,7 @@ export const info = {
       name: 'Freelance Web Developer',
       startDate: 'Junio 2023',
       endDate: 'Presente',
-      description: [
-        '- Desarrollo de pantallas y componentes UI para la aplicación web utilizando React y Tailwind.',
-      ],
+      description: [],
     },
 
     {
@@ -23,10 +21,10 @@ export const info = {
       startDate: 'Marzo 2023',
       endDate: 'Junio 2023',
       description: [
-        '✓ Implementación de nuevos componentes a los proyectos de la empresa.',
-        '✓ Ayudando y aprendiendo de otros compañeros.',
-        '✓ Mejoras y refactorización del código. ',
-        '✓ Buenas prácticas y mantenimiento de normas.',
+        '▪️ Implementación de nuevos componentes a los proyectos de la empresa.',
+        '▪️ Ayudando y aprendiendo de otros compañeros.',
+        '▪️ Mejoras y refactorización del código. ',
+        '▪️ Buenas prácticas y mantenimiento de normas.',
       ],
     },
   ],
@@ -37,14 +35,16 @@ export const info = {
       startDate: 'Octubre 2023',
       endDate: 'Presente',
       description: [
-        'React, Nextjs, Angular, Svelte, Vuejs, Flexbox, CSS Grid, Material Design, Jest, Cypress, Webpack, Vite, HTML5, CSS, JavaScript, TypeScript, d3js, CSS in JS, GraphQL, Blazor, Web Components, socket.io, Git, Github Actions.',
+        'Máster para afianzar mis conocimientos, usando las siguientes tecnologias (React, Nextjs, Angular, Svelte, Vuejs, Flexbox, CSS Grid, Material Design, Jest, Cypress, Webpack, Vite, HTML5, CSS, JavaScript, TypeScript, d3js, CSS in JS, GraphQL, Blazor, Web Components, socket.io, Git, Github Actions.)',
       ],
     },
     {
       name: 'Grado Superior en Desarrollo de Aplicaciones Web (DAW) - Medac, S.L.',
       startDate: 'Octubre 2021',
       endDate: 'Junio 2023',
-      description: ['Intermediate, Pre-Engineering.'],
+      description: [
+        'El Ciclo Formativo de Desarrollo de Aplicaciones Web oficial por la Juanta de Andalucia en la rama de Informática. La metodología del curso, se centra en aspectos clave del desarrollo front-end, sin descuidar los elementos esenciales del back-end, así como aspectos transversales como bases de datos y sistemas informáticos. ',
+      ],
     },
   ],
 
@@ -58,11 +58,11 @@ export const info = {
 
   projects: [
     {
-      title: 'Astro Portfolio',
+      title: 'A simple Mapbox Api Web App.',
       isFeatured: true,
-      thumbnail: '/assets/images/astro-portfolio.webp',
-      githubUrl: 'https://github.com/uzzii-21/astro-portfolio',
-      liveUrl: 'https://astro-portfolio-uzair.vercel.app/',
+      thumbnail: '/assets/images/MapsAppWeb.webp',
+      githubUrl: 'https://github.com/R4NU54/MapsApp',
+      liveUrl: 'https://angular16maps.netlify.app//',
     },
     {
       title: 'Ranusa Portfolio',
