@@ -65,11 +65,11 @@ export const info = {
       liveUrl: 'https://angular16maps.netlify.app//',
     },
     {
-      title: 'Ranusa Portfolio',
+      title: 'Raúl Núñez Portfolio',
       isFeatured: false,
       thumbnail: '/assets/images/astro-portfolio.webp',
-      githubUrl: 'https://github.com/uzzii-21/astro-portfolio',
-      liveUrl: 'https://astro-portfolio-uzair.vercel.app/',
+      githubUrl: 'https://github.com/r4nu54/porfolio',
+      liveUrl: 'https://raulnunez.es/',
     },
   ],
 };
