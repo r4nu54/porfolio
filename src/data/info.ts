@@ -23,7 +23,7 @@ export const info = {
       description: [
         '▪️ Implementación de nuevos componentes a los proyectos de la empresa.',
         '▪️ Ayudando y aprendiendo de otros compañeros.',
-        '▪️ Mejoras y refactorización del código. ',
+        '▪️ Mejoras y refactorización del código.',
         '▪️ Buenas prácticas y mantenimiento de normas.',
       ],
     },
