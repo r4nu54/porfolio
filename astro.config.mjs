@@ -9,10 +9,11 @@ export default defineConfig({
     sitemap(),
   ],
   compressHTML: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport'
+  },
   image: {
-    service: {
-      entrypoint: 'astro/assets/services/sharp'
-    },
     remotePatterns: [
       {
         protocol: 'https'

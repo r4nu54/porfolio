@@ -1,5 +1,6 @@
 ---
 import Footer from '@/components/Footer.astro';
+import Head from '@/components/Head.astro';
 import Navbar from '@/components/Navbar.astro';
 import { info } from '@/data/info';
 
@@ -7,12 +8,16 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
 }
 
 const {
   title = info.title,
   description = info.about,
   image = '/og-image.jpg', // Asegúrate de crear esta imagen
+  type = 'website',
+  publishedDate,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -114,10 +119,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       name='keywords'
       content='portfolio, desarrollador, programador, software, web'
     />
+
+    <Head
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      publishedDate={publishedDate}
+    />
   </head>
   <body class='relative'>
     <div
-      class='absolute bottom-0 top-0 -z-10 w-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
+      class='absolute top-0 bottom-0 -z-10 w-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
     </div>
     <Navbar />
     <main class='container'>

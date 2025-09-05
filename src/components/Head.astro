@@ -1,0 +1,215 @@
+---
+import { info } from '@/data/info';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+}
+
+const {
+  title = info.title,
+  description = info.about,
+  image = '/og-image.jpg',
+  type = 'website',
+  publishedDate,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+
+// Structured data for better SEO
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: info.name,
+  url: Astro.site,
+  description: info.about,
+  author: {
+    '@type': 'Person',
+    name: info.name,
+    url: Astro.site,
+    sameAs: [info.socialMedia.github, info.socialMedia.linkedin, info.socialMedia.twitter],
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: info.name,
+  url: Astro.site,
+  jobTitle: info.jobDescription,
+  description: info.about,
+  sameAs: [info.socialMedia.github, info.socialMedia.linkedin, info.socialMedia.twitter],
+  image: socialImageURL,
+};
+---
+
+<!-- SEO -->
+<meta charset='UTF-8' />
+<meta
+  name='viewport'
+  content='width=device-width'
+/>
+<title>{title}</title>
+<meta
+  name='title'
+  content={title}
+/>
+<meta
+  name='description'
+  content={description}
+/>
+<meta
+  name='generator'
+  content={Astro.generator}
+/>
+<meta
+  name='author'
+  content={info.name}
+/>
+<meta
+  name='keywords'
+  content='portfolio, desarrollador, programador, software, web, frontend, backend, fullstack, javascript, typescript, react, node, astro'
+/>
+<link
+  rel='canonical'
+  href={canonicalURL}
+/>
+<link
+  rel='sitemap'
+  href='/sitemap-index.xml'
+/>
+
+<!-- Favicon -->
+<link
+  rel='icon'
+  type='image/svg+xml'
+  href='/favicon.svg'
+/>
+<link
+  rel='apple-touch-icon'
+  sizes='180x180'
+  href='/apple-touch-icon.png'
+/>
+<link
+  rel='icon'
+  type='image/png'
+  sizes='32x32'
+  href='/favicon-32x32.png'
+/>
+<link
+  rel='icon'
+  type='image/png'
+  sizes='16x16'
+  href='/favicon-16x16.png'
+/>
+<link
+  rel='manifest'
+  href='/site.webmanifest'
+/>
+
+<!-- Open Graph / Facebook -->
+<meta
+  property='og:type'
+  content={type}
+/>
+<meta
+  property='og:url'
+  content={canonicalURL}
+/>
+<meta
+  property='og:title'
+  content={title}
+/>
+<meta
+  property='og:description'
+  content={description}
+/>
+<meta
+  property='og:image'
+  content={socialImageURL}
+/>
+<meta
+  property='og:site_name'
+  content={info.name}
+/>
+<meta
+  property='og:locale'
+  content='es_ES'
+/>
+
+<!-- Twitter -->
+<meta
+  property='twitter:card'
+  content='summary_large_image'
+/>
+<meta
+  property='twitter:url'
+  content={canonicalURL}
+/>
+<meta
+  property='twitter:title'
+  content={title}
+/>
+<meta
+  property='twitter:description'
+  content={description}
+/>
+<meta
+  property='twitter:image'
+  content={socialImageURL}
+/>
+<meta
+  name='twitter:creator'
+  content='@raulnunez'
+/>
+<meta
+  name='twitter:site'
+  content='@raulnunez'
+/>
+
+<!-- Theme -->
+<meta
+  name='theme-color'
+  content='#ffffff'
+  media='(prefers-color-scheme: light)'
+/>
+<meta
+  name='theme-color'
+  content='#000000'
+  media='(prefers-color-scheme: dark)'
+/>
+<meta
+  name='color-scheme'
+  content='dark light'
+/>
+
+<!-- RSS -->
+<link
+  rel='alternate'
+  type='application/rss+xml'
+  title={`${info.name} RSS Feed`}
+  href='/rss.xml'
+/>
+
+<!-- Structured Data -->
+<script
+  type='application/ld+json'
+  set:html={JSON.stringify(websiteSchema)}
+/>
+<script
+  type='application/ld+json'
+  set:html={JSON.stringify(personSchema)}
+/>
+
+<!-- Preload -->
+<link
+  rel='preload'
+  href='/fonts/your-main-font.woff2'
+  as='font'
+  type='font/woff2'
+  crossorigin
+/>
