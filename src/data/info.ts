@@ -59,17 +59,23 @@ export const info = {
   projects: [
     {
       title: 'A simple Mapbox Api Web App.',
+      description: 'Una aplicación web simple que utiliza la API de Mapbox para mostrar mapas interactivos con Angular 16.',
       isFeatured: true,
       thumbnail: '/assets/images/MapsAppWeb.webp',
       githubUrl: 'https://github.com/R4NU54/MapsApp',
       liveUrl: 'https://angular16maps.netlify.app//',
+      link: 'https://angular16maps.netlify.app//',
+      date: '2023-12-01',
     },
     {
       title: 'Raúl Núñez Portfolio',
+      description: 'Portfolio personal desarrollado con Astro, mostrando mis proyectos y experiencia como desarrollador web.',
       isFeatured: false,
       thumbnail: '/assets/images/astro-portfolio.webp',
       githubUrl: 'https://github.com/r4nu54/porfolio',
       liveUrl: 'https://raulnunez.es/',
+      link: 'https://raulnunez.es/',
+      date: '2024-01-15',
     },
   ],
 };
